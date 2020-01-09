@@ -65,6 +65,8 @@ namespace Ventas.Controllers
                         await roleManager.CreateAsync(new IdentityRole(item));
                     }
                 }
+                var user = await userManager.FindByIdAsync("146152db-be45-4c04-b298-d1c1dbf68973");
+                await userManager.AddToRoleAsync(user, "Admin");
             }
             catch (Exception ex)
             {
