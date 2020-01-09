@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -16,7 +17,8 @@ namespace Ventas.Controllers
         IServiceProvider _serviceProvider;
         public HomeController(IServiceProvider serviceProvider)
         {
-            _serviceProvider = serviceProvider;
+            //_serviceProvider = serviceProvider;
+            //ejecutarTareaAsync();
         }
         public async Task<IActionResult> Index()
         {
@@ -72,6 +74,18 @@ namespace Ventas.Controllers
             {
                 mensaje = ex.Message;
             }
+        }
+        private async Task ejecutarTareaAsync()
+        {
+            var data = await Tareas();
+            //await Tareas();
+            String tarea = "Ahora ejecutaremos las demas lineas de codigo porque la tarea a finalizado";
+        }
+        private async Task<String> Tareas()
+        {
+            Thread.Sleep( 20 * 1000 );
+            String tarea = "Tarea finalizada";
+            return tarea;
         }
     }
 }
