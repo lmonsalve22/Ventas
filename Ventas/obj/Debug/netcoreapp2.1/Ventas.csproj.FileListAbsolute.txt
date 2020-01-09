@@ -5,7 +5,6 @@ C:\Users\limc_\Documents\GitHub\Ventas\Ventas\bin\Debug\netcoreapp2.1\Ventas.dll
 C:\Users\limc_\Documents\GitHub\Ventas\Ventas\bin\Debug\netcoreapp2.1\Ventas.pdb
 C:\Users\limc_\Documents\GitHub\Ventas\Ventas\bin\Debug\netcoreapp2.1\Ventas.Views.dll
 C:\Users\limc_\Documents\GitHub\Ventas\Ventas\bin\Debug\netcoreapp2.1\Ventas.Views.pdb
-C:\Users\limc_\Documents\GitHub\Ventas\Ventas\obj\Debug\netcoreapp2.1\Ventas.csprojAssemblyReference.cache
 C:\Users\limc_\Documents\GitHub\Ventas\Ventas\obj\Debug\netcoreapp2.1\Ventas.csproj.CoreCompileInputs.cache
 C:\Users\limc_\Documents\GitHub\Ventas\Ventas\obj\Debug\netcoreapp2.1\Ventas.RazorAssemblyInfo.cache
 C:\Users\limc_\Documents\GitHub\Ventas\Ventas\obj\Debug\netcoreapp2.1\Ventas.RazorAssemblyInfo.cs
