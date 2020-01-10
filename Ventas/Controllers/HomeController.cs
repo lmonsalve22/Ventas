@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
+using Ventas.Areas.Principal.Controllers;
 using Ventas.Library;
 using Ventas.Models;
 
@@ -45,8 +46,8 @@ namespace Ventas.Controllers
                 if (model.ErrorMessage.Equals("True"))
                 {
                     var data = JsonConvert.SerializeObject(objects[1]);
-                    //return RedirectToAction(nameof(PrincipalController.Index), "Principal");
-                    return null;
+                    return RedirectToAction(nameof(PrincipalController.Index), "Principal");
+                    //return null;
                 }
                 else
                 {

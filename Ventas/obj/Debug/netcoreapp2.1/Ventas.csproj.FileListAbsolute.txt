@@ -37,3 +37,4 @@ C:\Users\limc_\Documents\GitHub\Ventas\Ventas\obj\Debug\netcoreapp2.1\Ventas.dll
 C:\Users\limc_\Documents\GitHub\Ventas\Ventas\obj\Debug\netcoreapp2.1\Ventas.pdb
 C:\Users\limc_\Documents\GitHub\Ventas\Ventas\obj\Debug\netcoreapp2.1\Ventas.csproj.CopyComplete
 C:\Users\limc_\Documents\GitHub\Ventas\Ventas\obj\Debug\netcoreapp2.1\Ventas.csprojAssemblyReference.cache
+C:\Users\limc_\Documents\GitHub\Ventas\Ventas\obj\Debug\netcoreapp2.1\Razor\Areas\Principal\Views\Principal\Index.g.cshtml.cs
