@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Ventas.Models;
 
 namespace Ventas.Library
 {
@@ -38,7 +39,15 @@ namespace Ventas.Library
                 if (result.Succeeded)
                 {
                     var appUser = _userManager.Users.Where(u => u.Email.Equals(email)).ToList();
-
+                    _userRoles = await _usersRole.getRole(_userManager,_roleManager,appUser[0].Id);
+                    _userData = new UserData
+                    {
+                        Id = appUser[0].Id,
+                        Role = _userRoles[0].Text,
+                        UserName = appUser[0].UserName
+                    };
+                    code = "0";
+                    description = result.Succeeded.ToString();
                 }
                 else
                 {
@@ -47,11 +56,19 @@ namespace Ventas.Library
                 }
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                code = "2";
+                description = ex.Message;
             }
+            _identityError = new IdentityError
+            {
+                Code = code,
+                Description = description
+            };
+            object[] data = { _identityError, _userData};
+            dataList.Add(data);
+            return dataList;
         }
         
     }

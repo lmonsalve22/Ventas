@@ -13,18 +13,13 @@ namespace Ventas.Areas.Identity.Pages
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
-#line 1 "C:\Users\limc_\Documents\GitHub\Ventas\Ventas\Areas\Identity\Pages\_ViewImports.cshtml"
+#line 3 "C:\Users\limc_\Documents\GitHub\Ventas\Ventas\Areas\Identity\Pages\_ViewImports.cshtml"
 using Microsoft.AspNetCore.Identity;
 
 #line default
 #line hidden
 #line 2 "C:\Users\limc_\Documents\GitHub\Ventas\Ventas\Areas\Identity\Pages\_ViewImports.cshtml"
 using Ventas.Areas.Identity;
-
-#line default
-#line hidden
-#line 3 "C:\Users\limc_\Documents\GitHub\Ventas\Ventas\Areas\Identity\Pages\_ViewImports.cshtml"
-using Microsoft.AspNetCore.Identity;
 
 #line default
 #line hidden

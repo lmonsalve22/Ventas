@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Ventas.Library
+namespace Ventas.Models
 {
     public class UserData
     {

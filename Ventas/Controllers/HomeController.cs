@@ -8,16 +8,23 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
+using Newtonsoft.Json;
+using Ventas.Library;
 using Ventas.Models;
 
 namespace Ventas.Controllers
 {
     public class HomeController : Controller
     {
-        
-        IServiceProvider _serviceProvider;
-        public HomeController(IServiceProvider serviceProvider)
+        private Usuarios _usuarios;
+        //IServiceProvider _serviceProvider;
+        //public HomeController(IServiceProvider serviceProvider)
+        public HomeController(
+            UserManager<IdentityUser> userManager,
+            SignInManager<IdentityUser> signInManager,
+            RoleManager<IdentityRole> roleManager)
         {
+            _usuarios = new Usuarios(userManager, signInManager, roleManager);
             //_serviceProvider = serviceProvider;
             //ejecutarTareaAsync();
         }
@@ -31,7 +38,20 @@ namespace Ventas.Controllers
         public async Task<IActionResult> Index(LoginViewModels model)
         {
             if (ModelState.IsValid) {
-
+                List<object[]> listObject = await _usuarios.userLogin(model.Input.Email, model.Input.Password);
+                object[] objects = listObject[0];
+                var _identityError = (IdentityError)objects[0];
+                model.ErrorMessage = _identityError.Description;
+                if (model.ErrorMessage.Equals("True"))
+                {
+                    var data = JsonConvert.SerializeObject(objects[1]);
+                    //return RedirectToAction(nameof(PrincipalController.Index), "Principal");
+                    return null;
+                }
+                else
+                {
+                    return View(model);
+                }
             }
             return View(model);
         }
