@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
@@ -22,8 +23,17 @@ namespace Ventas.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            await CreateRoles(_serviceProvider);
+            //await CreateRoles(_serviceProvider);
             return View();
+        }
+        [HttpPost]
+        [AllowAnonymous]
+        public async Task<IActionResult> Index(LoginViewModels model)
+        {
+            if (ModelState.IsValid) {
+
+            }
+            return View(model);
         }
 
         public IActionResult About()
