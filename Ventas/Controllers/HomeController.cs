@@ -2,26 +2,59 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
+using Newtonsoft.Json;
+using Ventas.Areas.Principal.Controllers;
+using Ventas.Library;
 using Ventas.Models;
 
 namespace Ventas.Controllers
 {
     public class HomeController : Controller
     {
-        
-        IServiceProvider _serviceProvider;
-        public HomeController(IServiceProvider serviceProvider)
+        private Usuarios _usuarios;
+        //IServiceProvider _serviceProvider;
+        //public HomeController(IServiceProvider serviceProvider)
+        public HomeController(
+            UserManager<IdentityUser> userManager,
+            SignInManager<IdentityUser> signInManager,
+            RoleManager<IdentityRole> roleManager)
         {
-            _serviceProvider = serviceProvider;
+            _usuarios = new Usuarios(userManager, signInManager, roleManager);
+            //_serviceProvider = serviceProvider;
+            //ejecutarTareaAsync();
         }
         public async Task<IActionResult> Index()
         {
-            await CreateRoles(_serviceProvider);
+            //await CreateRoles(_serviceProvider);
             return View();
+        }
+        [HttpPost]
+        [AllowAnonymous]
+        public async Task<IActionResult> Index(LoginViewModels model)
+        {
+            if (ModelState.IsValid) {
+                List<object[]> listObject = await _usuarios.userLogin(model.Input.Email, model.Input.Password);
+                object[] objects = listObject[0];
+                var _identityError = (IdentityError)objects[0];
+                model.ErrorMessage = _identityError.Description;
+                if (model.ErrorMessage.Equals("True"))
+                {
+                    var data = JsonConvert.SerializeObject(objects[1]);
+                    return RedirectToAction(nameof(PrincipalController.Index), "Principal");
+                    //return null;
+                }
+                else
+                {
+                    return View(model);
+                }
+            }
+            return View(model);
         }
 
         public IActionResult About()
@@ -72,6 +105,18 @@ namespace Ventas.Controllers
             {
                 mensaje = ex.Message;
             }
+        }
+        private async Task ejecutarTareaAsync()
+        {
+            var data = await Tareas();
+            //await Tareas();
+            String tarea = "Ahora ejecutaremos las demas lineas de codigo porque la tarea a finalizado";
+        }
+        private async Task<String> Tareas()
+        {
+            Thread.Sleep( 20 * 1000 );
+            String tarea = "Tarea finalizada";
+            return tarea;
         }
     }
 }

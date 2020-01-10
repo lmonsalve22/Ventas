@@ -8,11 +8,16 @@ C:\Users\limc_\Documents\GitHub\Ventas\Ventas\bin\Debug\netcoreapp2.1\Ventas.Vie
 C:\Users\limc_\Documents\GitHub\Ventas\Ventas\obj\Debug\netcoreapp2.1\Ventas.csproj.CoreCompileInputs.cache
 C:\Users\limc_\Documents\GitHub\Ventas\Ventas\obj\Debug\netcoreapp2.1\Ventas.RazorAssemblyInfo.cache
 C:\Users\limc_\Documents\GitHub\Ventas\Ventas\obj\Debug\netcoreapp2.1\Ventas.RazorAssemblyInfo.cs
+C:\Users\limc_\Documents\GitHub\Ventas\Ventas\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
 C:\Users\limc_\Documents\GitHub\Ventas\Ventas\obj\Debug\netcoreapp2.1\Ventas.AssemblyInfoInputs.cache
 C:\Users\limc_\Documents\GitHub\Ventas\Ventas\obj\Debug\netcoreapp2.1\Ventas.AssemblyInfo.cs
 C:\Users\limc_\Documents\GitHub\Ventas\Ventas\obj\Debug\netcoreapp2.1\Ventas.TagHelpers.input.cache
 C:\Users\limc_\Documents\GitHub\Ventas\Ventas\obj\Debug\netcoreapp2.1\Ventas.TagHelpers.output.cache
 C:\Users\limc_\Documents\GitHub\Ventas\Ventas\obj\Debug\netcoreapp2.1\Ventas.RazorCoreGenerate.cache
+C:\Users\limc_\Documents\GitHub\Ventas\Ventas\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Login.g.cshtml.cs
+C:\Users\limc_\Documents\GitHub\Ventas\Ventas\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\_ViewImports.g.cshtml.cs
+C:\Users\limc_\Documents\GitHub\Ventas\Ventas\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\limc_\Documents\GitHub\Ventas\Ventas\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ViewImports.g.cshtml.cs
 C:\Users\limc_\Documents\GitHub\Ventas\Ventas\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ViewStart.g.cshtml.cs
 C:\Users\limc_\Documents\GitHub\Ventas\Ventas\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
 C:\Users\limc_\Documents\GitHub\Ventas\Ventas\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
@@ -31,9 +36,5 @@ C:\Users\limc_\Documents\GitHub\Ventas\Ventas\obj\Debug\netcoreapp2.1\Ventas.Vie
 C:\Users\limc_\Documents\GitHub\Ventas\Ventas\obj\Debug\netcoreapp2.1\Ventas.dll
 C:\Users\limc_\Documents\GitHub\Ventas\Ventas\obj\Debug\netcoreapp2.1\Ventas.pdb
 C:\Users\limc_\Documents\GitHub\Ventas\Ventas\obj\Debug\netcoreapp2.1\Ventas.csproj.CopyComplete
-C:\Users\limc_\Documents\GitHub\Ventas\Ventas\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
-C:\Users\limc_\Documents\GitHub\Ventas\Ventas\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Login.g.cshtml.cs
-C:\Users\limc_\Documents\GitHub\Ventas\Ventas\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\_ViewImports.g.cshtml.cs
-C:\Users\limc_\Documents\GitHub\Ventas\Ventas\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.g.cshtml.cs
-C:\Users\limc_\Documents\GitHub\Ventas\Ventas\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ViewImports.g.cshtml.cs
 C:\Users\limc_\Documents\GitHub\Ventas\Ventas\obj\Debug\netcoreapp2.1\Ventas.csprojAssemblyReference.cache
+C:\Users\limc_\Documents\GitHub\Ventas\Ventas\obj\Debug\netcoreapp2.1\Razor\Areas\Principal\Views\Principal\Index.g.cshtml.cs
